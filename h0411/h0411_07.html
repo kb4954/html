@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+    </style>
+</head>
+<body>
+    <!--usemap: rect: 사각형, circle: 둥근원형, ploy: 다각형-->
+    <!--usemap: 이미지내에 구역을 나누어서 링크를 따로 걸 수 있게함.-->
+
+    <map name="ebs">
+        <area shape="poly" coords="96,323,73,350,103,381,233,380,229,320" href="https://www.ebssw.kr/coding/dcpView.do" target="_blank" alt="잡지마펭수">
+        <area shape="circle" coords="360,520,80" href="https://www.ebssw.kr/coding/blkCodingRunView.do" target="_blank" alt="달려라펭수연걸">
+        <area shape="rect" coords="20,740,680,1060" href="https://www.ebs.co.kr/"
+        target="_blank">  
+        <area shape="rect" coords="20,920,680,1064" href="https://www.ebssw.kr/coding/smpView.do"
+        target="_blank">  
+
+    </map>
+    <img src="images/event1.jpg" usemap="#ebs">
+    
+</body>
+</html>
