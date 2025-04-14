@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id>class>태그 순서로 따른다. */
+        /* 태그선택자 */
+        h2{color: green;}
+        li{font-size: 20px;}
+        /* 클래스선택자: 지정하는 곳을 여러부분 사용가능 */
+        .color{color: red; font-size: 25px;}
+        /* id 선택자 : 지정하는 곳은 1군데에만 사용 */
+        #id01{font-size: 14px; color: blue;}
+        span{color: red;}
+        .s02{color: blue; font-weight: 700;}
+
+    </style>
+</head>
+<body>
+    <h2>선택자종류</h2>
+    <ul>
+        <li>태그 선택자</li>
+        <li class="color">class 선택자</li>
+        <li id="id01">id 선택자</li>
+    </ul>
+    <div class="color">글자색상확인</div>
+
+    <p>
+        한국인터넷진흥원(KISA)이 과학기술정보통신부와 함께 오는 24일 서울 섬유센터에서 <span>‘2025 블록체인 밋업(Meetup) 콘퍼런스’를 개최한다고 14일 밝혔다.</span>
+        이번 콘퍼런스는 <span class="s02">‘디지털 신뢰 강화와 블록체인의 도약(Digital Trust Up! BlockChain Boost Up!)’</span>을 주제로, 블록체인의 최신 기술 현황을 공유하고 미래 발전 방향을 논의하는 자리로 마련된다.
+    </p>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{text-shadow: 5px 5px 3px #f00; /* 가로거리 세로거리 번짐정도 색상 마이너스는 뒤집어서 됨.
+            rgba는 투명도 */
+        font-size: 50px;
+        letter-spacing:-2px ;
+        word-spacing: 20px;
+        }
+        div{width: 200px; height: 20px; border: 1px solid black;
+        white-space: nowrap; /* wrap : 범위를 벗어나지못하고 하단으로 이어짐. nowrap : 상관없이 옆으로 이어짐*/
+        overflow: hidden; 
+        text-overflow: ellipsis;   /* text-overflow: ellipsis 글이 범위를 벗어나면 ...으로 바꿔줌*/
+        cursor: pointer; /*커서를 가져다대면 손모양으로 보이게끔 함.*/ 
+        }
+        div:hover{overflow:visible;/*커서를 갖다대면 내용을 보이게 해줌.*/ white-space: wrap;
+            height: 250px;
+        }
+        /* indent : 들여쓰기 , line-height:0.2 줄간격, 글자크기의 0.2배 */
+
+        h3{text-shadow: 7px -7px 5px rgba(0,0,0,0.8); font-size: 50px;}
+    </style>
+</head>
+<body>
+    <h2>회원가입 진행상황</h2>
+    <h3>회원가입</h3>
+
+    <div>애플이 가상현실(VR) 헤드셋 ‘비전 프로’의 실패에도 불구하고 VR 헤드셋 후속제품과 증강현실(AR) 안경 개발을 이어간다는 소식이 전해지면서 빅테크 기업 간 제품·기술 경쟁이 본격화할 전망이다. 애플은 지난해 초 비전 프로 1세대를 출시했지만 가격·성능 문제로 혹평을 받았다. 지난 2023년 스마트 안경을 내놓을 예정이었지만 개발을 완료하지 못해 출시 시기를 놓쳤다.</div>
+    
+</body>
+</html>
