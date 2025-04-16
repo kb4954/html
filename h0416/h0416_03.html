@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; font-size: 20px;}
+        div{width: 100px; height: 100px; border: 2px solid black;
+
+   
+        }
+        #container{width: 800px; height: 200px; border: 5px solid green;}
+        /* 예전에는 display:flex; 대신 float:left를 한개씩 다 해서 정렬함(왼쪽정렬). clear:both; -> 여기서부터 배치라는 뜻 */
+        .c1{float: left;}
+        .c2{float: left;}
+        .c3{clear: both;}
+    
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="c1">1</div>
+        <div class="c2">2</div>
+        <div class="c3">3</div>
+        <div class="c4">4</div>
+    </div>
+
+    
+</body>
+</html>

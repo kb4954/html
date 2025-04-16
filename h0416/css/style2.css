@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+*{margin: 0; padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+a{text-decoration: none; color: inherit;}
+ul,ol{list-style: none; }
+#header-top{width: 100%; height: 35px; background: #202020;}
+#header-top ul{ width: 400px; height: 35px; /* float: right;으로 오른쪽으로 정렬할 수 있음/ 글자사이 공간은 width값을 늘리면 됨. */
+    color: white; font-size: 13px; 
+    margin-right: 40px;
+    float: right;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav{width: 100%; height: 81px; border-bottom: 1px solid black;}
+#nav-nav{width:1840px; height: 81px;
+    margin: 0 auto; 
+    display: flex; justify-content: space-between;
+    align-items: center;/* 위에 붙어있는걸 내려오게함. */
+}
+nav .logo a{display: inline-block; 
+    /*a 태그는 width height가 안먹힘. 그래서 display: inline-block; 해줘야 먹힘.*/
+    width: 100px; height: 30px;
+    background: url('../images/ico_set.png') -320px -385px no-repeat;
+    background-size: 800px 800px;/* xy축 */
+
+}
+nav .menu{ width: 750px; }
+.menu ul{display: flex; justify-content: space-between;}
+.menu a{font-size: 22px; font-weight: 700;
+    line-height: 81px; height: 81px; display: inline-block;
+    box-sizing: border-box; /* 마우스커서를 댔을때 흔들리는 것을 방지해줌 */
+}
+.menu a:hover{
+    border-bottom: 4px solid #b2cd03;
+}
+
+nav .q_menu{width: 100px; height: 52px; }
+
+.q_menu ul{ font-size: 12px; font-weight: 600; color: #101010;
+    display: flex; justify-content: space-between;
+}
+
+.q_menu-img1, .q_menu-img2{ margin: 0 auto;
+    width: 32px; height: 32px;
+}
+.q_menu-img1{ 
+    background: url('../images/ico_set.png') -584px -320px no-repeat;
+    background-size: 800px 800px;
+}
+.q_menu-img2{
+    background: url('../images/ico_set.png') -628px -320px no-repeat;
+    background-size: 800px 800px;
+}
+#banner{ width: 100%; height: 320px;
+    background: url('../images/join_sub.jpg') no-repeat;
+}
+section{ width: 1000px; height: 1800px; border: 1px solid black; margin: 0 auto;}
+#location ul{width: 1000px; height: 15.6px; margin-top: 38px;  }
+#location>ul>li{
+    float: right;
+    font-size: 13px;
+    color: rgb(92, 92, 92);
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0px 13px 0px 10px;
+    background: url(../images/join/bg_location_li.png) right no-repeat;}
+section h3{width: 1000px; height: 57.5px; font-weight: 700; font-size: 40px;
+text-align: center; margin: 35px 0 15px;
+}
+
+
+
+

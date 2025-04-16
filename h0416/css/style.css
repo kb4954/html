@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+*{margin: 0; padding: 0;
+    font-family: "Noto Sans KR", sans-serif; font-optical-sizing: auto; font-style: normal;}
+    /* 기본 셋팅 */
+a{text-decoration: none; color: inherit;}
+ul,ol{list-style: none; }
+table,td{border-collapse: collapse;}
+
+
+
+#header-top{width: 100%; height: 35px; background: #202020;}
+#header-top ul{ width: 380px; height: 35px; /* float: right;으로 오른쪽으로 정렬할 수 있음/ 글자사이 공간은 width값을 늘리면 됨. */
+color: white; font-size: 13px; 
+margin-right: 40px; float: right; display: flex; 
+justify-content: space-between;
+align-items: center;}
+nav{width: 100%; height: 81px; border-bottom: 1px solid black;}
+#nav-nav{width:1840px; height: 81px;
+margin: 0 auto; display: flex; justify-content: space-between;
+align-items: center;/* 위에 붙어있는걸 내려오게함. */}
+nav .logo a{display: inline-block; 
+/*a 태그는 width height가 안먹힘. 그래서 display: inline-block; 해줘야 먹힘.*/
+width: 100px; height: 30px;
+background: url('../images/ico_set.png') -320px -385px no-repeat; background-size: 800px 800px;/* xy축 */}
+nav .menu{ width: 750px; }
+.menu ul{display: flex; justify-content: space-between;}
+.menu a{font-size: 22px; font-weight: 700;
+    line-height: 81px; height: 81px; display: inline-block;
+    box-sizing: border-box; /* 마우스커서를 댔을때 흔들리는 것을 방지해줌 */}
+.menu a:hover{border-bottom: 4px solid #b2cd03;}
+nav .q_menu{width: 100px; height: 52px; }
+.q_menu ul{ font-size: 12px; font-weight: 600; color: #101010;
+    display: flex; justify-content: space-between;}
+
+.q_menu-img1, .q_menu-img2{ margin: 0 auto; width: 32px; height: 32px;}
+.q_menu-img1{  background: url('../images/ico_set.png') -584px -320px no-repeat; 
+     background-size: 800px 800px;}
+.q_menu-img2{ background: url('../images/ico_set.png') -628px -320px no-repeat;
+     background-size: 800px 800px;}
+#banner{ width: 100%; height: 320px; 
+    background: url('../images/join_sub.jpg') no-repeat;}
+
+#content{width: 100%; height: 1200px;}
+/*그림밑 전체구역 정하기 ↓*/
+section{ width: 1000px; height: 1200px; 
+        margin: 0 auto;}
+
+.location ul{ display: flex; float: right; margin-top: 38px;
+    font-size: 13px; color: rgb(92, 92, 92); font-weight: 700; }
+
+/* 세번째 불필요한 화살표 사진 날림 ↓*/
+.location li a{ display: inline-block; padding:0 13px 0 10px;
+    background: url('../images/join/bg_location_li.png') right no-repeat;}
+.location li:nth-child(3) a{background-image: url(''); padding:0 0 0 10px;}
+/* 회원가입문구 */
+section h3{ clear: both; font-size: 40px; font-weight: 700; color: #333;
+    text-align: center; margin-bottom:30px; padding-top: 25px;}
+/* 가입절차안내 */
+.join-step{margin-bottom: 13px;}
+.join-step ul{display: flex; text-align: center;}
+
+.join-step li{ width: 333px; height: 103px; border: 1px solid #efefef;
+    box-sizing: border-box; padding: 20px 0;}
+
+.join-step li:nth-child(2){background: #8b8075; color: white;}
+
+.join-step span{font-size: 12px; font-weight: 700; padding: 10px 0 7px;}
+
+.join-step p{font-size: 20px; font-weight: 700;}
+section h4{width: 1000px; height: 36px; box-sizing: border-box;
+    padding: 0 0 10px 10px;
+    font-size: 20px;color: #333; font-weight: 600px;}
+
+section h4>span{font-size: 13px; color: #555;}
+
+section table{ width: 1000px;
+    border-top: 1px solid rgb(209, 209, 209);
+    border-bottom: 1px solid rgb(209, 209, 209);}
+section th,section td{ border-bottom: 1px solid rgb(230, 230, 230);
+    padding: 10px 20px; }
+section th{text-align: left; width: 200px; background: #f6f6f6;
+           font-size: 13px;}
+section th>span{display: inline-block; width: 10px; height: 10px;
+    background: url('../images/join/point_rs.png')no-repeat 45% 88%;
+    margin-right: 5px;}
+
+section td input{width: 280px; height: 30px; padding-left: 10px;}
+section td button{ width: 82px; height: 34px; background: #6f6f6f;
+    padding: 0 10px; color: white; font-weight: 700; 
+    border: none; cursor: pointer;}
+section td span{font-size: 13px; font-weight: 600; color: #555; margin-top: 5px;}
+.form-email td>input{width: 134px;}
+/*nth-of-type 같은 타입중*/
+.form-email td>input:nth-of-type(2){width: 164px;}
+.form-email select{width: 150px; height: 34px;}
+.form-address input[name='postZip']{width: 120px;}
+.form-address input[name='addr1']{width: 759px; margin-top: 5px;}
+.form-address input[name='addr2']{width: 759px; margin-top: 5px;}
+.form-phone input{width: 79px;}
+.form-birth select{width: 80px; height: 34px;}
+.form-birth span{margin-right: 10px;}
+.form-birth div{width: 150px; height: 20px; margin-top: 10px;}
+/* not(old): 임의의 이름 설정하고 기본 형태를 말함 opacity: 0; 선택되는 표시 이미지가 사라짐 */
+.form-birth label{ font-size: 13px; font-weight: 700; color: #555;}
+.form-birth input[type='radio']:not(old){width: 24px; height: 20px; opacity: 0;}
+
+/* checked가 안됐을때: radio off */
+.form-birth input[type='radio']:not(old) + label{
+    width: 24px; height: 24px;
+    margin:0 10px 0 -24px; padding-left: 24px;
+    background: url('../images/join/radio_off.jpg') no-repeat 0 2px;
+    
+/* checked가 됐을때 바로 인접한 label 을 붙여달라는 의미 */
+}
+.form-birth input[type='radio']:not(old):checked + label{
+    background: url('../images/join/radio_on.jpg') no-repeat 0 2px;
+
+}
+
+
+
+
+
+
+
+

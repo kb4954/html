@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; font-size: 20px;}
+        div{width: 300px; height: 200px; border: 5px solid black;
+            padding: 30px;
+        background: yellow;
+        box-sizing: border-box;
+        }
+        div>p{color: red; font-size: 30px;}
+        /*c1은 상위선택자 p는 하위 선택자 '>'이렇게 사용해도 가능
+        그러나 >는 바로 아래 하위선택자까지만 적용가능 그밑에는 안됨.
+
+        + : 인접형제선택자 하위선택자중 첫번째로 오는 선택자에게만 적용
+        */
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>연결선택자 사용</p>
+       
+    </div>
+    <hr>
+    <div>
+        <ul>
+           <li><p>적용방법 선택</p></li>
+            
+        </ul>
+
+    </div>
+
+    
+</body>
+</html>
