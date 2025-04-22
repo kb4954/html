@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //break 반복문 완전히 빠져나옴.continue 1번 멈추고 다시 실행
+        for(let i=0; i<10; i++){
+            //짝수만 제외하고 출력하시오: if (i%2!=0)
+            if (i%2==0) 
+            document.write(i,"<br>")
+        }*/
+        /*
+        //삼항식을 이용해서 최대값을 출력하시오.
+
+        let a = 30
+        let b = 50
+        let c = 20
+        let result = a>b? (a>c?a:c) : (b>c?b:c)
+
+        document.write(result,"<br>")
+        //함수로 최대값 나타내기 max 최소값은 min 제곱값은 pow 절댓값은 abs
+        let result2 = Math.max(a,b,c);
+        document.write(result2,"<br>")
+        //소수점(중요) : round() - 반올림, ceil()- 올림, floor()-버림
+        document.write(Math.round(1.579),"<br>") // 반올림은 무조건 소수점 첫째자리에서 됨. 
+
+        //소수점 3자리에서 반올림하시오 1.579*
+        document.write(Math.round(1.579*100)/100,"<br>");//소수점 셋째자리에서 반올림하고 싶을때는 100을 곱해서 반올림을 하고 다시 나눠줘야함 파이썬 제외
+
+        //소수점 2자리에서 반올림하시오 18.79
+        document.write(Math.round(18.79*10)/10,"<br>")*/
+
+        /*
+        //Math.random() : 0-1사이의 소수점 0.00000~9.99999999
+        // 정수형 1-10까지 랜덤으로 숫자중 1개를 출력하시오. 10을 곱해주고 더하기 1을 하면 됨 . 10X+1
+        // paseInt(10*Math.random())+1; // 1-10까지 랜덤숫자
+        document.write(parseInt(10*Math.random())+1,"<br>")
+        // 정수형 1-45까지 랜덤숫자
+        document.write(parseInt(45*Math.random())+1,"<br>")
+
+        // 정수형 0-9까지 랜덤숫자 공식으로 만들면 parseInt((9+1)*Math.random())
+        document.write(parseInt(10*Math.random())); // 0부터일때는 1을 제외하고 그냥 하면 됨
+        
+        //랜덤숫자 1-10까지 숫자 3개를 출력하시오.
+        document.write(parseInt(10*Math.random())+1,"<br>");
+        document.write(parseInt(10*Math.random())+1,"<br>");
+        document.write(parseInt(10*Math.random())+1,"<br>");
+        */
+        
+        let ran1 = parseInt(10*Math.random())+1;
+
+        let i = 0;
+        let input=0;// while문 안쪽에 있으면 지역변수라서 밖에서도 전역변수로 해줘야지 while문 밖에서도 출력가능
+        while(i<5){
+            let input = prompt("숫자를 입력하세요.>> ")
+            if (ran1<input){
+                alert("입력값이 큽니다")
+            }else if(ran1>input){
+                alert("입력값이 작습니다")
+            }else{
+                alert("같습니다.")
+                break
+            }
+            i++;
+        }
+        // 입력값이 크면 크다. 작으면 작다. 맞으면 정답 
+
+
+        document.write("정답 : ",ran1,"<br>")
+        document.write("입력값 : ",input,"<br>")
+
+        
+
+
+
+    </script>
+</body>
+</html>

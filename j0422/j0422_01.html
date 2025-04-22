@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>div{border: 1px solid black; width: 200px;
+        height: 40px; text-align: center;}
+
+    </style>
+    <script>
+        // 스크립트안에 넣으면 바로실행되므로 function안에 넣어야 나중에 실행됨.예를 들어 클릭한다던지(함수)
+        // string타입 -> number타입으로 변경해야 덧셈가능
+        function cal(){
+            alert("확인")
+            let kor = Number(document.querySelector("#kor").value);
+            let eng = Number(document.querySelector("#eng").value);
+            document.querySelector("#cal").innerText = kor+eng
+
+        }
+
+    </script>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <label>국어</label>
+    <input type="text" name="kor" id="kor"><br>
+    <label>영어</label>
+    <input type="text" name="eng" id="eng"><br>
+    <button type="button" onclick="cal()">저장하기</button>
+    <h3>합계</h3>
+    <div id="cal" >0</div>
+</body>
+</html>

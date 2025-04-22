@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{border: 1px solid black; text-align: center;
+        border-collapse: collapse;}
+        th,td{width: 150px; height: 40px;}
+    </style>
+</head>
+<body>
+    <h2>랜덤숫자 정답</h2>
+    <table>
+        
+        <tr>
+            <th>정답</th>
+            <td id="ran">0</td>
+        </tr>
+    </table>
+    <h2>입력한 숫자</h2>
+    <table>
+        <tr>
+            <th>번호</th>
+            <td>입력값</td>
+        </tr>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+    <script>
+        let arr1 = [];
+        let hdata = "";
+        let ran1 = parseInt((Math.random()*100)+1);
+        document.querySelector("#ran").innerText = arr1;
+        for(i=0; i<5; i++){
+            arr1.push(ran1);
+            let input = prompt("숫자를 입력하시오.");
+            hdata +="<tr>";
+            hdata +=`<td>${i+1}</td>`;
+            hdata +=`<td>${input}</td>`;
+            hdata += "</tr>";
+        }
+        document.querySelector("#tbody").innerHTML = hdata;
+    
+
+        /*
+        //1. 랜덤숫자 1개를 생성
+        let arr2 = []
+        //2. 5번 시도 후 크다, 작다, 맞다 
+        let input=0
+        let i=0
+        let ran1 = parseInt((Math.random()*10)+1)
+        while(i<5){
+            let input=prompt("숫자를 입력하시오.");
+            //3. 입력받은 숫자를 배열에 추가
+            arr2.push(input) //입력한 숫자 배열에 추가
+            if(ran1>input){
+                document.write("입력한 숫자가 작습니다.","<br>");
+                
+            }else if(ran1==input){
+                document.write("같다.","<br>");
+                break
+            }else{
+                document.write("입력한 숫자가 큽니다.","<br>");
+            }
+            i++;
+            
+        }
+        
+        //4. 정답 출력
+        document.write("랜덤 숫자 : ",ran1,"<br>")
+        //5. 입력한 값 출력.
+        document.write("입력한 숫자 : ",arr2);
+        for(let i=0;i<arr1.length;i++){
+            document.write(arr1[i],"<br>");
+        }*/
+
+
+
+
+
+        //배열추가 : push() - 뒤에 추가, unshift() - 앞에추가, 
+        // splice(2,0,'d') - 2번째 위치에 인덱스 0에 d를 추가해 원하는 위치 추가
+        //배열삭제 : pop() - 뒤에 제거, shift() - 앞에 제거, 
+        // splice(2,1) - 2번째 요소 1개를 제거 뒤에 아무것도 없으면 삭제하라는 뜻 원하는 위치 제거
+        /*
+        let arr1 = [];
+        //1-100 push
+        for(let i=0;i<100;i++){
+            if((i+1)%2!=0)
+                arr1.push(i+1);
+
+        }
+        document.write("배열길이 : ",arr1.length,"<br>");
+        for(let i=0; i<arr1.length; i++){
+            document.write(arr1[i],"<br>");
+        }*/
+        /*
+        //파이썬 - 리스트 : 배열
+        let arr1 = [1,2,3,4,5];
+        document.write(arr1[0],"<br>");
+        document.write(arr1[3],"<br>");
+        document.write(arr1[4],"<br>");*/
+
+
+    </script>
+</body>
+</html>
