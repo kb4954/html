@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>회원가입 02</title>
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script src="js/member.js"></script>
-    <script>
- 
-
-    </script>
+    <style>
+        header{transition: 1s;}
+        .fixed{position: fixed; background: black; color: white;
+            width: 100%;
+        }
+       
+    </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div id="header-top">
             <ul>
                 <li><a href="#">회원가입</a></li>
@@ -97,7 +98,7 @@
                     <tr>
                         <th><span></span>비밀번호</th>
                         <td>
-                            <input type="password" name="pw" id="pw" >
+                            <input type="password" name="pw">
                             <br>
                             <span>영문, 숫자, 특수문자 중 2종류 조합 시 10자리 이상 입력</span>
                             <br>
@@ -107,8 +108,8 @@
                     <tr>
                         <th><span></span>비밀번호 확인</th>
                         <td>
-                            <input type="password" name="pw2" id="pw2"onkeyup="pwConfirm()">
-                            <span id="pwCheck">비밀번호를 다시 한번 입력해 주세요.</span>
+                            <input type="password" name="pw2">
+                            <span>비밀번호를 다시 한번 입력해 주세요.</span>
                         </td>
                     </tr>
                     <tr class="form-email">
@@ -116,17 +117,8 @@
                         <td>
                             <input type="text" name="email1">
                             <span>@</span>
-                            <input type="text" name="email2" id="email2">>
-                            <script>
-                                function emailChange(){
-                                    //alert("email을 변경했습니다.")
-                                    let email_sel = document.querySelector("#email-sel").value;
-                                    console.log(email_sel);
-                                    document.querySelector("#email2").value = email_sel;
-                                }
-
-                            </script>
-                            <select name="email-sel" onchange="emailChange()" id="email-sel">
+                            <input type="text" name="email2">
+                            <select name="email-sel">
                                 <option value="1">직접입력</option>
                                 <option value="naver.com">네이버</option>
                                 <option value="daum.net">다음</option>
@@ -137,12 +129,12 @@
                     <tr class="form-address">
                         <th><span></span>주소</th>
                         <td>
-                            <input type="text" name="postZip" id="postZip">
-                            <button type="button" onclick="zipCodeBtn()">우편번호</button>
+                            <input type="text" name="postZip">
+                            <button type="button">우편번호</button>
                             <br>
-                            <input type="text" name="addr1" id="addr1">
+                            <input type="text" name="addr1">
                             <br>
-                            <input type="text" name="addr2" id="addr2">
+                            <input type="text" name="addr2">
                         </td>
                     </tr>
                     <tr class="form-phone">
@@ -376,6 +368,18 @@
         </div>
 
     </footer>
+    <script>
+        let header = document.querySelector("#header");
+        document.addEventListener("scroll",()=>{
+            if(this.scrollY>50){
+                //fixed 클래스 추가
+                header.classList.add("fixed");
+            }else{
+                //fixed 클래스 삭제
+                header.classList.remove("fixed");
+            }
+        })
+    </script>
     
 </body>
 </html>

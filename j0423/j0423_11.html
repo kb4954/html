@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--제이쿼리:자라 라이브러리 쉬운느낌 최신버전 다운로드 코드-->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>제이쿼리</title>
+    <script>
+        //제이쿼리 선언문
+        $(function(){
+            let num = 1;//전역변수 전체를 다 도는 변수
+            $("#next").click(function(){
+                if(num>5){num=1;} 
+                num++; // 1씩 증가
+                $("#img").attr("src",`images/best0${num}.jpg`)
+            });
+
+            $("#pre").click(function(){
+                if(num<1){num=6;} 
+                num--; // attr: 속성값을 바꿔라
+                $("#img").attr("src",`images/best0${num}.jpg`)
+            })
+            
+
+
+        });
+    </script>
+    <style>
+        button{font-size: 30px;}
+
+    </style>
+</head>
+<body>
+    <div>
+        <img id="img" src="images/best01.jpg">
+    </div>
+    <button id="pre"><i class="fa-solid fa-chevron-left"></i></button>    
+    <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+
+</body>
+</html>
