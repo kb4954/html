@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <title>게시판</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/notice_list.css">
+  <script>
+    
+    $(function(){
+      // 로딩시 게시글 10개 리스트 출력
+      let no = 1;
+      let hdata = ``;
+      for(no=1; no<=10; no++){
+        hdata += `<tr>`;
+        hdata += `<td><span class="table-notice">${no}</span></td>`;
+        hdata += `<td class="table-title">`;
+        hdata += `<a href="#">이벤트신청</a>`;
+        hdata += `</td>`;
+        hdata += `<td>2025-04-24</td>`;
+        hdata += `<td>100</td>`;
+        hdata += `</tr>`;
+        
+
+      }
+      $("#tbody").html(hdata);
+      // 게시글 저장을 하면 게시글 추가 
+      $("#cbtn").click(function(){
+        console.log("현재 no : ",no);
+        //alert("게시글 저장")
+        console.log($("#txt").val());
+        //tbody html 추가
+        hdata = ``; // 위에 있던 기존에 있던 데이터를 초기화하고 새롭게 추가해줘
+        hdata += `<tr>`;
+        hdata += `<td><span class="table-notice">${no}</span></td>`;
+        hdata += `<td class="table-title">`;
+        hdata += `<a href="#">${$("#txt").val()}</a>`;
+        hdata += `</td>`;
+        hdata += `<td>2025-04-24</td>`;
+        hdata += `<td>100</td>`;
+        hdata += `</tr>`;
+        
+        $("#tbody").prepend(hdata);
+
+
+
+        //input 글자 삭제
+        $("#txt").val(""); // 빈공백을 넣으면 삭제가 됨. 
+        alert("게시글이 저장되었습니다. ")
+        no++;
+        console.log("증가 no : ",no);
+        
+
+
+      })
+
+
+      
+        
+        
+          
+        
+        
+        
+      
+
+
+    });//jquery
+  </script>
+</head>
+<body>
+<section>
+    <h1>NOTICE</h1>
+    <div class="wrapper">
+      <form action="/search" name="search" method="post">
+       
+
+        <div class="title">
+          <input type="text" id="txt">
+        </div>
+  
+        <button type="button" id="cbtn">게시글 저장</button>
+      </form>
+    </div>
+
+    <table>
+      <colgroup>
+        <col width="18%">
+        <col width="50%">
+        <col width="18%">
+        <col width="10%">
+      </colgroup>
+      <!-- 제목부분 -->
+      <tr>
+        <th>No.</th>
+        <th>제목</th>
+        <th>작성일</th>
+        <th>조회수</th>
+      </tr>
+      <!-- 내용부분 -->
+      <tbody id="tbody">
+
+
+      </tbody>
+        
+      </table>
+
+    <ul class="page-num">
+      <li class="first"></li>
+      <li class="prev"></li>
+      <li class="num"><div>1</div></li>
+      <li class="next"></li>
+      <li class="last"></li>
+    </ul>
+
+    <a href="write_view.jsp"><div class="write">쓰기</div></a>
+  </section>
+
+</body>
+</html>

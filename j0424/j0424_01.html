@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <script>
+        // 자바에서는 value -> 제이쿼리에서는 val(), innerText -> text() , 
+        // innerHTML -> html() - 기존 html 모두 삭제 후 추가 
+        // append(), prepend() - 기존 html에 추가
+        // 제이쿼리는 초기 데이터 = 정적, 데이터를 추가하면 동적으로 바뀜 
+        // 동적은 나중에 데이터를 추가하면 초기데이터 위치값을 찾지 못함을 말한다. 
+        $(function(){
+            $("#cbtn").click(function(){
+                let hdata =""; // 안에 있을때는 초기화가 되면서 한번씩만 추가 됨 밖에 있을때는 개수가 계속 증가
+                //alert("알림창")    
+                hdata += `<ul>`;
+                hdata += `<li>사과</li>`;
+                hdata += `<li>배</li>`;
+                hdata += `<li>바나나</li>`;
+                hdata += `</ul>`;
+                $(".txt").prepend(hdata) // html, append, prepend
+                //alert("데이터를 추가했습니다.")    
+                $("#chg").click(function(){
+                    $("li").css({"font-size":"30px","color":"red","border":"1px solid black"})
+             
+                    
+
+                })
+            $("li").click(function(){
+                console.log($(this).text());
+                $(this).css({"font-size":"30px","color":"red","border":"1px solid black"})
+        
+            })
+            $("img").click(function(){
+                console.log($(this).attr("src"))
+                $(this).removeAttr("alt")
+            })
+
+
+
+            });
+            
+        });//jquery
+    </script>
+    <style>
+        li{ 
+        }
+    </style>
+</head>
+<body>
+    <div class="txt">
+        <ul>
+            <li>스위스</li>
+            <li>이탈리아</li>
+            <li>프랑스</li>
+        </ul>
+        
+
+    </div>
+    <img src="images/best01.jpg" alt="상품이미지">
+    <button id="cbtn">추가</button>
+    <button id="chg">변경</button>
+</body>
+</html>
